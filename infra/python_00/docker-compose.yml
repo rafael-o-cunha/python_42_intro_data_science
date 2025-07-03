@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  # Nome do serviço (pode ser qualquer um)
+  app:
+    # Nome do container que será criado
+    container_name: javascript_practice
+    # Constrói a imagem a partir do Dockerfile especificado
+    build:
+      context: ..
+      dockerfile: infra/node/Dockerfile
+    # Mapeia os diretórios locais para dentro do container
+    volumes:
+      - ../src:/app/src
+      - ../scripts:/app/scripts
+    # Garante que o container reinicie apenas se for parado manualmente
+    restart: unless-stopped
