@@ -1,3 +1,17 @@
+"""
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Hello.py                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rafade-o <rafade-o@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/05 02:21:02 by rafade-o          #+#    #+#             */
+/*   Updated: 2025/07/05 02:50:51 by rafade-o         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+"""
+
 ft_list = ["Hello", "tata!"]
 ft_tuple = ("Hello", "toto!")
 ft_set = {"Hello", "tutu!"}
@@ -7,7 +21,6 @@ ft_list[1] = "World!"
 
 ft_tuple = (ft_tuple[0], "Brazil!")
 
-# para garantir ordem nesse caso seria preciso usar "sorted" na impressão
 ft_set.remove("tutu!")
 ft_set.add("Rio de Janeiro!")
 

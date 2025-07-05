@@ -1,4 +1,4 @@
-SERVICE_NAME = ex00
+SERVICE_NAME = python_03
 COMPOSE_FILE = ./infra/docker-compose.yml
 
 all: up

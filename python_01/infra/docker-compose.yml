@@ -1,10 +1,9 @@
 services:
-  ex00:
-    container_name: ex00
+  python_01:
+    container_name: Gallifrey
     build:
       context: ..
       dockerfile: ./infra/Dockerfile
-    # Mapeia o diretório pai ('ex00') do host para o diretório '/app' no contêiner.
     volumes:
       - ../:/app
     command: tail -f /dev/null
