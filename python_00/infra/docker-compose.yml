@@ -1,10 +1,9 @@
 services:
-  ex00:
-    container_name: ex00
+  python_00:
+    container_name: Krypton
     build:
       context: ..
       dockerfile: ./infra/Dockerfile
-    # Mapeia o diretório pai ('ex00') do host para o diretório '/app' no contêiner.
     volumes:
       - ../:/app
     command: tail -f /dev/null
