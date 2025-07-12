@@ -2,24 +2,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   format_ft_time.py                                  :+:      :+:    :+:   */
+/*   tester.py                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafade-o <rafade-o@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/05 03:17:29 by rafade-o          #+#    #+#             */
-/*   Updated: 2025/07/11 21:57:57 by rafade-o         ###   ########.fr       */
+/*   Created: 2025/07/11 22:44:27 by rafade-o          #+#    #+#             */
+/*   Updated: 2025/07/11 22:48:09 by rafade-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 """
 
-import time
-import datetime
+from NULL_not_found import NULL_not_found
 
-timestamp = time.time()
-seconds = f"{timestamp:,.4f}"
-e_seconds = f"{timestamp:.2e}"
+Nothing = None
+Garlic = float("NaN")
+Zero = 0
+Empty = ’’
+Fake = False
 
-print(f'Seconds since January 1, 1970: {seconds} or {e_seconds} in scientific notation')
-
-date = datetime.datetime.fromtimestamp(timestamp)
-print(date.strftime("%b %d %Y"))
+NULL_not_found(Nothing)
+NULL_not_found(Garlic)
+NULL_not_found(Zero)
+NULL_not_found(Empty)
+NULL_not_found(Fake)
+print(NULL_not_found("Brian"))

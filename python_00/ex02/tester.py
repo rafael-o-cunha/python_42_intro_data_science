@@ -2,24 +2,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   format_ft_time.py                                  :+:      :+:    :+:   */
+/*   tester.py                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafade-o <rafade-o@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/05 03:17:29 by rafade-o          #+#    #+#             */
-/*   Updated: 2025/07/11 21:57:57 by rafade-o         ###   ########.fr       */
+/*   Created: 2025/07/11 22:00:48 by rafade-o          #+#    #+#             */
+/*   Updated: 2025/07/11 22:40:36 by rafade-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 """
 
-import time
-import datetime
+from find_ft_type import all_thing_is_obj
 
-timestamp = time.time()
-seconds = f"{timestamp:,.4f}"
-e_seconds = f"{timestamp:.2e}"
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello" : "titi!"}
 
-print(f'Seconds since January 1, 1970: {seconds} or {e_seconds} in scientific notation')
+all_thing_is_obj(ft_list)
+all_thing_is_obj(ft_tuple)
+all_thing_is_obj(ft_set)
+all_thing_is_obj(ft_dict)
+all_thing_is_obj("Brian")
+all_thing_is_obj("Toto")
+print(all_thing_is_obj(10))
 
-date = datetime.datetime.fromtimestamp(timestamp)
-print(date.strftime("%b %d %Y"))
