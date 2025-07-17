@@ -11,3 +11,14 @@
 - Reach – planeta do universo Halo (importante para a lore)
 - Nirn – planeta onde se passa a série The Elder Scrolls (Skyrim, etc.)
 - Zebes – planeta natal de Samus Aran (Metroid)
+
+---
+### Norminette
+- Para rodar o código com a Norminette é preciso usar o Flake8
+```bash
+#para instalar
+pip install flake8
+
+#para usar
+flake8 seu_arquivo.py
+```
