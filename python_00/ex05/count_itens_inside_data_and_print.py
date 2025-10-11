@@ -11,6 +11,13 @@
 # ************************************************************************** #
 
 def count_itens_inside_data_and_print(data: str):
+    """
+        Counts the number of upper, lower, punctuation, spaces, and digit
+        characters.
+
+        Args:
+            text: The text to analyze.
+    """
     total_chars = len(data)
     spaces = data.count(" ")
     upper_letters = 0
