@@ -14,7 +14,31 @@ import sys
 from ft_filter import ft_filter
 
 
+def ft_my_filter(data: str, size: int) -> bool:
+    punctuations = r"%&'()*+,-./:;<=>?@[\]^_`{|}~"
+
+    if len(data) <= size:
+        return False
+
+    for c in data:
+        if (0 <= ord(c) <= 31) or (127 <= ord(c) <= 159):
+            return False
+        if 173 <= ord(c) <= 255:
+            return False
+        elif punctuations.find(c) != -1:
+            return False
+    return True
+
+
 def main():
+    """
+        Args:
+            S (str): A string containing words separated by spaces.
+            N (int): The length limit (len > N).
+
+        Returns:
+            list: A list of words that meet the criteria.
+    """
     argc = sys.argv.__len__()
 
     if argc == 3:
@@ -28,7 +52,12 @@ def main():
         print('AssertionError: the arguments are bad')
         return
 
-    filtered_data = ft_filter(data, size)
+    size = int(size)
+    lambda word: (len(word) >= size)
+
+    data_list = data.split(' ')
+    filtered_data = ft_filter(lambda word: ft_my_filter(word, size), data_list)
+
     print(filtered_data)
     return
 
