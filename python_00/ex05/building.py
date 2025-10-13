@@ -12,8 +12,10 @@
 
 import sys
 from count_itens_inside_data_and_print import count_itens_inside_data_and_print
+from docs import py_doc, MAIN
 
 
+@py_doc(MAIN)
 def main():
     argc = sys.argv.__len__()
 
