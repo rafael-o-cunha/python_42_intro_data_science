@@ -21,9 +21,9 @@ def ft_my_filter(data: str, size: int) -> bool:
         return False
 
     for c in data:
-        if (0 <= ord(c) <= 31) or (127 <= ord(c) <= 159):
+        if ord(c) in range(0, 32) or ord(c) in range(127, 160):
             return False
-        if 173 <= ord(c) <= 255:
+        if ord(c) in range(173, 256):
             return False
         elif punctuations.find(c) != -1:
             return False
