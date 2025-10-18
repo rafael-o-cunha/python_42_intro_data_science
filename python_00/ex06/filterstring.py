@@ -12,11 +12,15 @@
 
 import sys
 from ft_filter import ft_filter
-from docs import py_doc, MAIN, FT_MY_FILTER
 
 
-@py_doc(FT_MY_FILTER)
 def ft_my_filter(data: str, size: int) -> bool:
+    """
+        Validate string length and character content.
+
+        Returns True if string is longer than size and contains no control
+        characters, invisible characters, or punctuation marks.
+    """
     punctuations = r"%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
     if len(data) <= size:
@@ -32,8 +36,15 @@ def ft_my_filter(data: str, size: int) -> bool:
     return True
 
 
-@py_doc(MAIN)
 def main():
+    """
+        Args:
+            S (str): A string containing words separated by spaces.
+            N (int): The length limit (len > N).
+
+        Returns:
+            list: A list of words that meet the criteria.
+    """
     argc = sys.argv.__len__()
 
     if argc == 3:
