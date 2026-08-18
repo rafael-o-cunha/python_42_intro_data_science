@@ -1,6 +1,6 @@
 services:
   python_01:
-    container_name: Gallifrey
+    container_name: py01
     build:
       context: ..
       dockerfile: ./infra/Dockerfile
